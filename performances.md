@@ -41,18 +41,18 @@ function update() {
 requestAnimationFrame(update)
 ```
 ---
-- Reduce the amount of DOM elements, avoid using unnecessary elements. The more elements you have the more time the browser will take to recalculate.
+- Reduce the amount of DOM elements, avoid using unnecessary elements. The more elements you have the more time the browser will take to recalculate. Also, try to keep the HTML as semantic as possible
 ```html
 // BAD
 <div class="accordion">
 	<div class="accordion__head">
 		<div>
-			<p>title<p>
+			<span>title<span>
 		<div>
 	<div>
 	<div class="accordion__content">
 		<div>
-			<p>content<p>
+			<span>content<span>
 		<div>
 	<div>
 </div>
@@ -62,10 +62,12 @@ requestAnimationFrame(update)
 // GOOD
 <div class="accordion">
 	<div class="accordion__head">
-		title
+		<p>
+			title
+		</p>
 	<div>
 	<div class="accordion__content">
-		content
+		...content
 	<div>
 </div>
 ```
