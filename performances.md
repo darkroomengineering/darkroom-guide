@@ -1,3 +1,4 @@
+
 # Browser Performances
 
 ## How browser works
@@ -206,3 +207,56 @@ window.addEventListener('mousemove',onMouseMove,false)
 ```
 ---
 - Use your browser devtools performances tab to figure out costly operations. Keep in mind to run 60fps, a browser frame execution duration shouldn't exceed 16ms.
+---
+- Reduce CSS size. Using media queries, prefer adding CSS properties than remove. The less CSS properties has an element the faster it will be to recalculate on layout/reflow. It's better for bundle size too.
+```scss
+// BAD
+nav {
+	transform: translateY(100%);
+	opacity:0;
+	
+	&--open {
+		transform: translateY(0);
+		oapcity: 1;
+	}
+}
+```
+```scss
+// GOOD
+nav {
+	// removed 2 lines
+	&--close{
+		transform: translateY(100%);
+		opacity:0;
+	}
+}
+```
+---
+- Consider animate only elements visible on screen. Use `IntersectionObserver`. With `locomotive-scroll` it's always better to use `data-scroll-section`. It will transform only visible parts of your page instead of all page.
+```html
+// BAD
+<div data-scroll-container>
+	<section></section>
+	<section></section>
+	<footer></footer>
+</div>
+```
+```html
+// GOOD
+<div data-scroll-container>
+	<section data-scroll-section></section>
+	<section data-scroll-section></section>
+	<footer data-scroll-section></footer>
+</div>
+```
+---
+- Use `next/image`. Don't forget to use `sizes` prop: `(min-width: 800px) [desktop size]vw, [mobile]vw`. Apply `priority` prop on first visible images on landing as hero. Images below can just take `loading="eager"`
+```html
+// BAD
+<Image src="image.jpg">
+```
+```html
+// GOOD
+<Image src="image.jpg" sizes="(min-width: 800px) 30vw, 100vw">
+```
+---
