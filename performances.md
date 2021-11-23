@@ -281,9 +281,11 @@ nav {
     <div></div>
   <Slider>
 :
-   <div></div>
-   <div></div>
-   <div></div>	
+  <div>
+     <div></div>
+     <div></div>
+     <div></div>
+  <div>
 }
 
 ```
