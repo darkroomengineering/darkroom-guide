@@ -262,7 +262,7 @@ nav {
 <Image src="image.jpg" sizes="(min-width: 800px) 30vw, 100vw">
 ```
 ---
-### Execute only neceassary code.
+### Execute only necessary code.
 - Only add a component to its specific use case. In other words, prefer to remove the component than to disable it. So the component's effect will be executed only when it's necessary.
 ```html
 // BAD
