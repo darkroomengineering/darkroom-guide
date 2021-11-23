@@ -266,7 +266,7 @@ nav {
 - Only add a component to its specific use case. In other words, prefer to remove the component than to disable it. So the component's effect will be executed only when it's necessary.
 ```html
 // BAD
-<Slider enabled={!mobile}>
+<Slider enabled={mobile}>
   <div></div>
   <div></div>
   <div></div>
@@ -275,15 +275,15 @@ nav {
 ```html
 // GOOD
 { mobile ?
+  <Slider>
     <div></div>
     <div></div>
-    <div></div>	
+    <div></div>
+  <Slider>
 :
-  <Slider>
-    <div></div>
-    <div></div>
-    <div></div>
-  <Slider>
+   <div></div>
+   <div></div>
+   <div></div>	
 }
 
 ```
