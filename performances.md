@@ -291,7 +291,7 @@ nav {
 
 ---
 ### Single responsibility principle
-Every class should have only one responsibility [SOLID](https://en.wikipedia.org/wiki/SOLID)
+Every class should have only one responsibility [SOLID](https://en.wikipedia.org/wiki/SOLID). Its name should describe the exact behaviour without any doubts.
 ```css
 // BAD
 .hidden-overflow {
@@ -304,5 +304,13 @@ Every class should have only one responsibility [SOLID](https://en.wikipedia.org
 // GOOD
 .hidden-overflow {
   overflow: hidden;
+}
+
+or
+
+.hidden-overflow-mobile {
+  @include mobile {
+    overflow: hidden;
+  }
 }
 ```
