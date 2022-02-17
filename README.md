@@ -1,6 +1,6 @@
 [![DARKROOM](https://assets.studiofreight.com/darkroom/header.png)](https://github.com/studio-freight/darkroom)
 
-# Darkroom
+# SFDR (Studio Freight Darkroom)
 
 ## Index:
 
