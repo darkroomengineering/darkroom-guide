@@ -1,5 +1,5 @@
 
-# Browser Performances
+# Browser Performance
 
 ## How browser works
 First, read [this](https://gist.github.com/paulirish/5d52fb081b3570c81e3a) and every its references below.   
