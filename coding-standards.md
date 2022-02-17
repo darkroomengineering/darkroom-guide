@@ -154,3 +154,20 @@ const MyRender = ({imagesArray}) => {
 }
 
 ```
+
+- Working with Github template and its branches:
+
+```
+1. Go to template and click use this template button.
+2. Create new project and specify all branches option.
+3. Convert the branch on the new project you want to use as main. You can do it from Github branches or rebasing/merging.
+4. Add template as a remote --> git remote add template [repository URL]
+
+For pulling changes from template branch "example":
+ - git checkout -b example
+ - git pull template example
+ - git switch main
+ - git rebase example
+ - git push --force
+ ```
+
