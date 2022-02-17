@@ -54,7 +54,7 @@ slider/arrow.svg
 assets/illustrations/wizard.svg
 assets/icons/arrow.svg
 ```
-### Don't attach ui elements to components
+### Don't attach UI elements to components
 
 ```javascript
 // BAD
