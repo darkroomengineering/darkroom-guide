@@ -2,7 +2,7 @@
 Not much here yet, but feel free to add a new section with Git related information below.
 
 ## Working with Github templates and branches with specific functionality:
-Since we have (Satus)[https://github.com/studio-freight/satus], we should always try to use it as a base for our projects, to keep it simple we've created branches with specific functionality, i.e. `with-shopify`, `with-contentful`. Here's a simple guide on how to use those branches and update them with the latest goodies from Satus
+Since we have [Satus](https://github.com/studio-freight/satus), we should always try to use it as a base for our projects, to keep it simple we've created branches with specific functionality, i.e. `with-shopify`, `with-contentful`. Here's a simple guide on how to use those branches and update them with the latest goodies from Satus
 
 1. Go to the template and click 'use this template' button.
 2. Create a new project and check 'Include all branches' option.
