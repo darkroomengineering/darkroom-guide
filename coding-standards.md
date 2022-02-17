@@ -165,9 +165,9 @@ const MyRender = ({imagesArray}) => {
 4. Add template as remote using `git remote add template [repository URL]`
 
 To pull changes from template branch "example":
- - git checkout -b example
- - git pull template example
- - git switch main
- - git rebase example
- - git push --force
+1. `git checkout -b example`
+2. `git pull template example`
+3. `git switch main`
+4. `git rebase example`
+5. `git push --force`
 
