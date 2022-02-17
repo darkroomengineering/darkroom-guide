@@ -40,12 +40,13 @@ lib/contenful/renderer.js
 // GOOD
 contentful/home-renderer.js
 ```
-### Use /assets folder with assets/icons for icons and assets/illustrations for illustrations duh:
+### Use /assets folder with assets/icons for icons and assets/illustrations for illustrations, duh:
 
 ```javascript
 // BAD
 illustrations/wizard.svg
-lib/arrow.svgslider/arrow.svg
+lib/arrow.svg
+slider/arrow.svg
 ```
 
 ```javascript
