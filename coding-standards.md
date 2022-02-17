@@ -1,6 +1,6 @@
-# Coding Standards 
+## Coding Standards 
 
-- Use lowercase and kebab-case for EVERY file, even hooks:
+### Use lowercase and kebab-case for EVERY file, even hooks:
 
 ```javascript
 // BAD
@@ -11,7 +11,7 @@ RealViewport
 // GOOD
 real-viewport
 ```
-- Do not export as default:
+### Do not export as default:
 
 ```javascript
 // BAD
@@ -29,7 +29,7 @@ export const test = () => ()
 // Then
 import { test } from 'components/test'
 ```
-- Use CMS folder for all CMS related files:
+### Use CMS folder for all CMS related files:
 
 ```javascript
 // BAD
@@ -40,7 +40,7 @@ lib/contenful/renderer.js
 // GOOD
 contentful/home-renderer.js
 ```
-- Use /assets folder with assets/icons for icons and assets/illustrations for illustrations duh:
+### Use /assets folder with assets/icons for icons and assets/illustrations for illustrations duh:
 
 ```javascript
 // BAD
@@ -53,7 +53,7 @@ lib/arrow.svgslider/arrow.svg
 assets/illustrations/wizard.svg
 assets/icons/arrow.svg
 ```
-- Don't attach ui elements to components
+### Don't attach ui elements to components
 
 ```javascript
 // BAD
@@ -67,7 +67,7 @@ import arrow from './arrow.svg'
 import { Slider } from 'components/slider'
 import Arrow from 'assets/icons/arrow.svg'
 ```
-- Add a render validation for rich text or must be set as required on contentful
+### Add a render validation for rich text or must be set as required on contentful
 
 ```javascript
 // BAD
@@ -82,7 +82,7 @@ import Arrow from 'assets/icons/arrow.svg'
   {firstBodyContent.content && renderBody(firstBodyContent.content)}
 </div>
 ```
-- When using graphql not add "|| null" in getStaticProps, graphql already does that
+### When using graphql not add "|| null" in getStaticProps, graphql already does that
 
 ```javascript
 // BAD
@@ -93,7 +93,7 @@ const data = {briefDescription: item?.briefDescription || null}
 // GOOD
 const data = {briefDescription: item.briefDescription}
 ```
-- In getStaticProps manage arrays with validation and return empty array if is null
+### In getStaticProps manage arrays with validation and return empty array if is null
 
 ```javascript
 // BAD
@@ -130,7 +130,7 @@ const MyRender = ({imagesArray}) => {
   )
 }
 ```
-- Use mobile css as default
+### Use mobile css as default
 
 ```css
 // BAD
@@ -155,9 +155,9 @@ const MyRender = ({imagesArray}) => {
 
 ```
 
-- Working with Github templates and branches with specific functionality:
 
-```
+## Working with Github templates and branches with specific functionality:
+
 1. Go to the template and click 'use this template' button.
 2. Create a new project and check 'Include all branches' option.
 3. Turn the branch on the new project you want to use into `main`. You can do it from Github branches or rebasing/merging.
@@ -169,5 +169,4 @@ To pull changes from template branch "example":
  - git switch main
  - git rebase example
  - git push --force
- ```
 
