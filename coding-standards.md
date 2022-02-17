@@ -83,7 +83,7 @@ import Arrow from 'assets/icons/arrow.svg'
   {firstBodyContent.content && renderBody(firstBodyContent.content)}
 </div>
 ```
-### When using graphql not add "|| null" in getStaticProps, graphql already does that
+### When using GraphQL there's no need to check for "|| null" in getStaticProps, GraphQL already does that
 
 ```javascript
 // BAD
@@ -94,7 +94,7 @@ const data = {briefDescription: item?.briefDescription || null}
 // GOOD
 const data = {briefDescription: item.briefDescription}
 ```
-### In getStaticProps manage arrays with validation and return empty array if is null
+### In getStaticProps manage arrays with validation and return an empty array if it is null
 
 ```javascript
 // BAD
