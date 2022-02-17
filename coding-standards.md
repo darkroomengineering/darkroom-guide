@@ -18,7 +18,7 @@ real-viewport
 const test = () => ()
 export default test
 
-//Then 
+// Then 
 import test from 'components/test'
 ```
 
@@ -26,7 +26,7 @@ import test from 'components/test'
 // GOOD
 export const test = () => ()
 
-//then
+// Then
 import { test } from 'components/test'
 ```
 - Use CMS folder for all CMS related files:
@@ -57,13 +57,13 @@ assets/icons/arrow.svg
 
 ```javascript
 // BAD
-//in components/slider/index.js:
+// In components/slider/index.js:
 import arrow from './arrow.svg'
 ```
 
 ```javascript
 // GOOD
-//in the page where slider is being imported:
+// In the page where slider is being imported:
 import { Slider } from 'components/slider'
 import Arrow from 'assets/icons/arrow.svg'
 ```
@@ -155,15 +155,15 @@ const MyRender = ({imagesArray}) => {
 
 ```
 
-- Working with Github template and its branches:
+- Working with Github templates and branches with specific functionality:
 
 ```
-1. Go to template and click use this template button.
-2. Create new project and specify all branches option.
-3. Convert the branch on the new project you want to use as main. You can do it from Github branches or rebasing/merging.
-4. Add template as a remote --> git remote add template [repository URL]
+1. Go to the template and click 'use this template' button.
+2. Create a new project and check 'Include all branches' option.
+3. Turn the branch on the new project you want to use into `main`. You can do it from Github branches or rebasing/merging.
+4. Add template as remote using `git remote add template [repository URL]`
 
-For pulling changes from template branch "example":
+To pull changes from template branch "example":
  - git checkout -b example
  - git pull template example
  - git switch main
