@@ -50,21 +50,19 @@ requestAnimationFrame(update);
 <div class="accordion">
   <div class="accordion__head">
     <div>
-      <span
-        >title<span>
-          <div>
+      <span>title</span>
+      <div>
+        <div>
+          <div class="accordion__content">
             <div>
-              <div class="accordion__content">
-                <div>
-                  <span
-                    >content<span>
-                      <div>
-                        <div></div></div></span
-                  ></span>
-                </div>
+              <span>content</span>
+              <div>
+                <div></div>
               </div>
-            </div></div></span
-      ></span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -92,20 +90,20 @@ requestAnimationFrame(update);
 ```javascript
 // BAD
 const Cursor = () => {
-	const [mouse,setMouse] = useState({x=0,y=0})
+  const [mouse,setMouse] = useState({x=0,y=0})
 
-	function onMouseMove({pageX,pageY}) {
-		// render component every mousemove events
-		setMouse({x:pageX,y:pageY})
-	}
+  function onMouseMove({pageX,pageY}) {
+    // render component every mousemove events
+    setMouse({x:pageX,y:pageY})
+  }
 
-	useLayoutEffect(()=>{
-		window.addEventListener('mousemove',onMouseMove,false)
-	},[])
+  useLayoutEffect(()=>{
+    window.addEventListener('mousemove',onMouseMove,false)
+  },[])
 
-	console.log('update')
+  console.log('update')
 
-	return <div style={"transform":`translate3d(${x}px,${y}px,0)`}></div>
+  return <div style={"transform":`translate3d(${x}px,${y}px,0)`}></div>
 }
 ```
 
@@ -153,11 +151,11 @@ const Fade = ({ children, active }) => {
 ```javascript
 // GOOD
 const Fade = ({children, active}) => {
-	return (
-		<div style={"opacity": active ? 1 : 0, "transition": "opacity 1s ease-out"}>
-			{children}
-		</div>
-	)
+  return (
+    <div style={"opacity": active ? 1 : 0, "transition": "opacity 1s ease-out"}>
+      {children}
+    </div>
+  )
 }
 ```
 
