@@ -4,12 +4,12 @@
 
 ```javascript
 // BAD
-RealViewport;
+RealViewport
 ```
 
 ```javascript
 // GOOD
-real - viewport;
+real-viewport
 ```
 
 ## Do not export as default:
@@ -35,27 +35,27 @@ import { test } from 'components/test'
 
 ```javascript
 // BAD
-lib / contenful / renderer.js;
+lib/contenful/renderer.js
 ```
 
 ```javascript
 // GOOD
-contentful / home - renderer.js;
+contentful/home-renderer.js
 ```
 
 ### Use /assets folder with assets/icons for icons and assets/illustrations for illustrations, duh:
 
 ```javascript
 // BAD
-illustrations / wizard.svg;
-lib / arrow.svg;
-slider / arrow.svg;
+illustrations/wizard.svg
+lib/arrow.svg
+slider/arrow.svg
 ```
 
 ```javascript
 // GOOD
-assets / illustrations / wizard.svg;
-assets / icons / arrow.svg;
+assets/illustrations/wizard.svg
+assets/icons/arrow.svg
 ```
 
 ### Don't attach UI elements to components
@@ -63,14 +63,14 @@ assets / icons / arrow.svg;
 ```javascript
 // BAD
 // In components/slider/index.js:
-import arrow from "./arrow.svg";
+import arrow from "./arrow.svg"
 ```
 
 ```javascript
 // GOOD
 // In the page where slider is being imported:
-import { Slider } from "components/slider";
-import Arrow from "assets/icons/arrow.svg";
+import { Slider } from "components/slider"
+import Arrow from "assets/icons/arrow.svg"
 ```
 
 ## Add a render validation for rich text or must be set as required on contentful
@@ -89,12 +89,12 @@ import Arrow from "assets/icons/arrow.svg";
 
 ```javascript
 // BAD
-const data = { briefDescription: item?.briefDescription || null };
+const data = { briefDescription: item?.briefDescription || null }
 ```
 
 ```javascript
 // GOOD
-const data = { briefDescription: item.briefDescription };
+const data = { briefDescription: item.briefDescription }
 ```
 
 ## In getStaticProps manage arrays with validation and return an empty array if it is null
