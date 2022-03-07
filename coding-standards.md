@@ -103,8 +103,9 @@ const data = { briefDescription: item.briefDescription }
 // BAD
 export const getStaticProps = async ({ preview = false }) => {
   const imagesArray = data?.imagesArray ?
-  data.imagesArray.map((item) => ({image: item.src})
-  : null   return imagesArray
+    data.imagesArray.map((item) => ({image: item.src})
+    : null   
+  return imagesArray
 }
 
 const MyRender = ({imagesArray}) => {
