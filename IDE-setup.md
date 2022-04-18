@@ -1,5 +1,5 @@
 ## IDE of choice
-Not exactly an IDE but a Text Editor, VSCode is our weapon of choice, this doesn't mean you're forced to use it, it's just convenient.
+Not exactly an IDE but a Text Editor, [VSCode](https://code.visualstudio.com) is our weapon of choice, this doesn't mean you're forced to use it, it's just convenient.
 If you like webstorm, or sublime better feel free to use them instead and share the reasons with the team, we may convert.
 
 Just make sure they support the following extensions:
